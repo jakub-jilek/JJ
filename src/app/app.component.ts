@@ -53,5 +53,7 @@ export class AppComponent {
   onDelete() {
     this.heroes = [];
   }
+
+
   
 }
