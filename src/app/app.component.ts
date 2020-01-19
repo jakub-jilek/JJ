@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 import { FirebaseService } from './services/firebase.service';
 import { Hero } from './models/hero.model';
@@ -16,7 +15,7 @@ export class AppComponent {
   formGroup: FormGroup;
   heroes: Hero[] = [];
 
-  constructor(private http: HttpClient, private fs: FirebaseService) {
+  constructor(private fs: FirebaseService) {
     this.formGroup = new FormGroup({
       name: new FormControl("", Validators.required),
       alias: new FormControl("", Validators.required),
@@ -51,7 +50,7 @@ export class AppComponent {
     this.formGroup.reset();
   }
 
-  onDelete(id: string) {
+  onDelete() {
     this.heroes = [];
   }
 }
