@@ -1,3 +1,4 @@
+import { HeroFormComponent } from './forms/hero-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,11 +13,15 @@ import { MatTableModule } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableHeroesComponent } from './table-heroes/table-heroes.component';
 import { FirebaseService } from './services/firebase.service';
+import { AuthComponent } from './auth/auth.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableHeroesComponent
+    TableHeroesComponent,
+    AuthComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { FirebaseService } from './services/firebase.service';
     BrowserAnimationsModule,
     MatTableModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
