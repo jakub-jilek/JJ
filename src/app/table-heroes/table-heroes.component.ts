@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Hero } from '../models/hero.model';
+import { Hero } from '../models/hero';
 
 @Component({
   selector: 'table-heroes',

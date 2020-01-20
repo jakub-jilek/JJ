@@ -9,7 +9,7 @@
                 <label for="password">Password</label>
                 <input class="form-control" id="password" placeholder="Password" formControlName="password" required>
             </div>
-            <button type="button" class="btn btn-primary" style="margin-right: 5px;" [disabled]="authFormGroup.invalid">{{ login ? 'Login' : 'Sign Up' }}</button>
+            <button class="btn btn-primary" style="margin-right: 5px;" [disabled]="authFormGroup.invalid">{{ login ? 'Login' : 'Sign Up' }}</button>
             <button type="button" class="btn btn-primary" (click)="onSwitch()">Switch to {{ login ? 'Sign Up' : 'Login' }}</button>
         </form>
     </div>  

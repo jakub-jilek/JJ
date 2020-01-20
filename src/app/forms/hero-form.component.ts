@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Hero } from '../models/hero.model';
+import { Hero } from '../models/hero';
 import { FirebaseService } from '../services/firebase.service';
 
 @Component({
@@ -8,8 +8,10 @@ import { FirebaseService } from '../services/firebase.service';
     templateUrl: './hero-form.component.html'
 })
 export class HeroFormComponent {
-    formGroup: FormGroup;
+  formGroup: FormGroup;
   heroes: Hero[] = [];
+
+  isAuthenticated = false;
 
   constructor(private fs: FirebaseService) {
     this.formGroup = new FormGroup({

@@ -15,6 +15,7 @@ import { TableHeroesComponent } from './table-heroes/table-heroes.component';
 import { FirebaseService } from './services/firebase.service';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,11 @@ import { AuthGuardService } from './auth/auth-guard.service';
     BrowserAnimationsModule,
     MatTableModule
   ],
-  providers: [FirebaseService, AuthGuardService],
+  providers: [
+    FirebaseService,
+    AuthGuardService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
