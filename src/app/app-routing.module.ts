@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'form', component: HeroFormComponent },
-  { path: 'auth', component: AuthComponent }
+  { path: '', component: AuthComponent }
 ];
 
 @NgModule({

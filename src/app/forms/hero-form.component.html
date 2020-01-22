@@ -1,5 +1,5 @@
 <mat-tab-group>
-    <mat-tab routerLink="/form" label="Formulář" *ngIf="isAuthenticated">
+    <mat-tab routerLink="/form" label="Formulář">
         <div class="container mat-lab-margin">
         <div class="row">
             <div class="col-md-6 col-xs-6">
@@ -88,11 +88,6 @@
             </div>
             </div>
         </div>
-        </div>
-    </mat-tab>
-    <mat-tab routerLink="/auth" label="Přihlášení" *ngIf="!isAuthenticated">
-        <div class="container mat-lab-margin">
-            <app-auth></app-auth>
         </div>
     </mat-tab>
     <mat-tab label="Tabulka" *ngIf="heroes?.length > 0">

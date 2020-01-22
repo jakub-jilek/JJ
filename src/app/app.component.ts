@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
+import { Component, OnChanges } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Hero } from './models/hero';
+import { FirebaseService } from './services/firebase.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +11,4 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-
-  
 }

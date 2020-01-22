@@ -11,8 +11,6 @@ export class HeroFormComponent {
   formGroup: FormGroup;
   heroes: Hero[] = [];
 
-  isAuthenticated = false;
-
   constructor(private fs: FirebaseService) {
     this.formGroup = new FormGroup({
       name: new FormControl("", Validators.required),

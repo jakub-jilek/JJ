@@ -1,8 +1,9 @@
 import { UserService, AuthResponseData } from './../services/user.service';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { User } from '../models/user';
 
 @Component({
     selector: 'app-auth',

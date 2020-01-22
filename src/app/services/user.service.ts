@@ -16,8 +16,6 @@ export interface AuthResponseData {
 @Injectable()
 export class UserService {
 
-    user: Subject<User>;
-
     constructor(private http: HttpClient) {}
     
     signup(email: string, password: string) {
